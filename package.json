@@ -1,0 +1,36 @@
+{
+    "name": "crowdstress",
+    "version": "0.9.0",
+    "author": "Евгений Козлов",
+    "description": "CrowdStress - это приложение, которое моделирует поведение толпы в помещении, позволяя выявить места, в которых может образоваться затор или давка.",
+    "main": "main.js",
+    "devDependencies": {
+        "electron": "^4.0.2",
+        "electron-builder": "^20.38.5",
+        "javascript-obfuscator": "^0.18.1",
+        "uglifycss": "^0.0.29"
+    },
+    "dependencies": {
+        "xml2js": "^0.4.19"
+    },
+    "build": {
+        "appId": "CrowdStress",
+        "files": [
+            {
+                "filter": [
+                    "!js/main.js",
+                    "!js/modules/*",
+                    "!css/style.css",
+                    "!css/flaticon.css",
+                    "!_builder/*"
+                ]
+            }
+        ]
+    },
+    "scripts": {
+        "start": "node compress.js && electron .",
+        "compress": "node _builder/compress.js",
+        "pack": "electron-builder --dir",
+        "dist": "electron-builder"
+    }
+}

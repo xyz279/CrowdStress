@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no">
+	<head>
+		<title>
+			CrowdStress
+		</title>
+		<link rel="stylesheet" href="css/style.min.css">
+		<link rel="stylesheet" href="css/colors.css">
+	</head>
+	
+	<body>
+		<div class="window">
+			<div class="window-frame">
+				<div class="window-title" id="window-title">
+					CrowdStress
+				</div>
+				<div class="window-frame-button minimize" id="minimize-button">
+					<i class="flaticon-minus-symbol"></i>
+				</div>
+				<div class="window-frame-button close" id="close-button">
+					<i class="flaticon-letter-x"></i>
+				</div>
+			</div>
+
+			<div class="menubar">
+				<div class="menubar-item" id="file">
+					Файл
+				</div>
+				<div class="menubar-item" id="edit">
+					Правка
+				</div>
+				<div class="menubar-item" id="tools">
+					Инструменты
+				</div>
+			</div>
+
+			<div class="toolbar">
+				<div class="toolbar-item" title="Создать" id="createFileButton">
+					<img src="img/new.svg">
+				</div>
+				<div class="toolbar-item" title="Открыть" id="openFileButton">
+					<img src="img/open.svg">
+				</div>
+				<div class="toolbar-item" title="Сохранить" id="saveFileButton">
+					<img src="img/save.svg">
+				</div>
+				<div class="toolbar-item disabled" title="Отменить" id="undoButton">
+					<img src="img/undo-inactive.svg">
+				</div>
+				<div class="toolbar-item disabled" title="Вернуть" id="redoButton">
+					<img src="img/redo-inactive.svg">
+				</div>
+
+				<div class="toolbar-separator"></div>
+
+				<button class="toolbar-item" id="runButton" title="Запустить">
+					<img src="img/play.svg">
+				</button>
+				<button class="toolbar-item disabled" id="stopButton" title="Остановить">
+					<img src="img/stop-inactive.svg">
+				</button>
+
+				<div class="toolbar-separator"></div>
+
+				<button class="toolbar-item" id="viewSettingsButton">
+					<img src="img/eye.svg">
+					<span>Настройки отображения</span>
+					<small>&#x25BC;</small>
+				</button>
+			</div>
+
+			<div class="main-block">
+				<div class="field">
+					<canvas id="canvas"></canvas>
+				</div>
+				<div class="sidebar">
+					<div class="side-block">
+						<div class="toolbox">
+							<div class="toolbox-item" data-tool="walls">
+								<div class="tool">
+									<img src="img/brickwall.svg" title="Разместить стены">
+								</div>
+							</div>
+							<div class="toolbox-item" data-tool="exits">
+								<div class="tool">
+									<img src="img/door.svg" title="Разместить выходы">
+								</div>
+							</div>
+							<div class="toolbox-item" data-tool="directions">
+								<div class="tool">
+									<img src="img/exit.svg" title="Указать направление движения">
+								</div>
+							</div>
+							<div class="toolbox-item" data-tool="place">
+								<div class="tool">
+									<img src="img/community.svg" title="Разместить людей">
+								</div>
+							</div>
+							<div class="toolbox-item" data-tool="eraser">
+								<div class="tool">
+									<img src="img/shovel.svg" title="Удалить стену или выход">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="statusbar">
+				<div id="info">
+					Новый проект
+				</div>
+				<div id="status"></div>
+			</div>
+		</div>
+
+		<script src="js/main.min.js"></script>
+	</body>
+</html>

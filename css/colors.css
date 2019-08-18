@@ -1,0 +1,12 @@
+:root
+{
+    --main-bg-color: #f0f0f0;
+    --second-bg-color: #ffffff;
+    --third-bg-color: #ffffff;
+    --statusbar-bg-color: #bdc3c7;
+    --statusbar-color: #000000;
+    --border-color: #adb3b7;
+    --highlight-bg-color: #e4e9ed;
+    --highlight-border-color: #e4e9ed;
+    --close-button-bg-color: #f22613;
+}
